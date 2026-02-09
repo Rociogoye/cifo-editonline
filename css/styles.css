@@ -29,24 +29,26 @@
         "pie"
 }
 
-header{grid-area: cabecera; background-color: rgb(56, 56, 56); color: aliceblue;}
-main{grid-area: contenido;}
-footer{grid-area: pie; background-color: rgb(56, 56, 56); color: aliceblue;}
+#catalogo header{grid-area: cabecera; background-color: rgb(56, 56, 56); color: aliceblue;}
+#catalogo main{grid-area: contenido;}
+#catalogo footer{grid-area: pie; background-color: rgb(56, 56, 56); color: aliceblue;}
 
-h1{
+#catalogo h1{
     font-size: clamp(18px, 14.02px + 0.936vw, 32px);
 }
 
-h2 {
+#catalogo h2 {
     font-size: clamp(16px, 12.59px + 0.803vw, 28px);
 }
 
+#catalogo
 .container{
     padding: 3rem 1rem; 
+    margin: 0 3rem;
     border: 3px solid red;
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     /*grid-template-columns: 100%;*/
     grid-template-areas:
     "imagen"
@@ -57,36 +59,37 @@ h2 {
 }
 
 
-figure{grid-area: imagen;}
-h3{grid-area: titulo; text-align: center; font-size: clamp(16px, 13.73px + 0.535vw, 24px);}
-ul{grid-area: descripcion; padding: 1rem;}
-li{grid-area: descripcion;}
-button{grid-area: boton; background-color: red; color: white;}
+#catalogo figure{grid-area: imagen;}
+#catalogo h3{grid-area: titulo; text-align: center; font-size: clamp(16px, 13.73px + 0.535vw, 24px);}
+#catalogo ul{grid-area: descripcion; padding: 1rem;}
+#catalogo li{grid-area: descripcion;}
+#catalogo button{grid-area: boton; background-color: red; color: white;}
 
-.card{
+
+#catalogo .card{
     place-items: center;
     background-color: white;
     border: 3px solid yellow;
 }
 
-.card figure{
+#catalogo .card figure{
     width: 100%;
 }
 
-.card figure img{
+#catalogo .card figure img{
     width: 100%;
 }
 
-.card ul{
+#catalogo .card ul{
     list-style: none;
     
 }
 
-.card li{
+#catalogo .card li{
     text-align: center;
 }
 
-button{
+#catalogo button{
     padding: 0.4rem 1rem;
     margin: 0.8rem;
     display: flex;
@@ -116,12 +119,12 @@ button{
         "pie"
 }
 
-header{grid-area: cabecera; background-color: rgb(56, 56, 56); color: aliceblue;}
-main{grid-area: contenido;}
-footer{grid-area: pie; background-color: rgb(56, 56, 56); color: aliceblue;}
+#quienes header{grid-area: cabecera; background-color: rgb(56, 56, 56); color: aliceblue;}
+#quienes main{grid-area: contenido;}
+#quienes footer{grid-area: pie; background-color: rgb(56, 56, 56); color: aliceblue;}
 
 
-#container_edit{
+#quienes .container_edit{
     display: grid;
     max-width: 1290px;
     width: 100%;
@@ -131,11 +134,109 @@ footer{grid-area: pie; background-color: rgb(56, 56, 56); color: aliceblue;}
 
 }
 
-.jovenes{
+#quienes .jovenes{
     width: 100%;
 }
 
-.jovenes img{
+#quienes .jovenes img{
     width: 100%;
     aspect-ratio: 9/16;
+}
+
+#quienes .donde ul{
+    list-style: none;
+}
+
+#quienes iframe{
+    width: 100%;
+}
+
+
+/* Página AUTORES E ILUSTRADORES */
+#autores{
+    background-color: rgb(231, 199, 132);
+    font: 1.4rem / 1.5 var(--font-family);
+    min-height: 100vh;
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-areas:
+        "cabecera"
+        "contenido"
+        "pie"
+}
+
+#autores header{grid-area: cabecera; background-color: rgb(56, 56, 56); color: aliceblue;}
+#autores main{grid-area: contenido;}
+#autores footer{grid-area: pie; background-color: rgb(56, 56, 56); color: aliceblue;}
+
+
+#autores h1{
+    font-size: clamp(18px, 14.02px + 0.936vw, 32px);
+}
+
+#autores h2 {
+    font-size: clamp(16px, 12.59px + 0.803vw, 28px);
+}
+
+#autores
+.container{
+    padding: 3rem 1rem; 
+    margin: 0 3rem;
+    border: 3px solid red;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas:
+    "imagen"
+    "titulo"
+    "descripcion"
+    "descripcion"
+    "boton"
+}
+
+
+#autores figure{grid-area: imagen;}
+#autores h3{grid-area: titulo; text-align: center; font-size: clamp(16px, 13.73px + 0.535vw, 24px);}
+#autores p{grid-area: descripcion; padding: 1rem;}
+#autores p{grid-area: descripcion;}
+#autores button{grid-area: boton; background-color: red; color: white;}
+
+
+#autores .card{
+    place-items: center;
+    background-color: white;
+    border: 3px solid yellow;
+}
+
+#autores .card figure{
+    width: 100%;
+}
+
+#autores .card figure img{
+    width: 100%;
+}
+
+
+
+#autores button{
+    padding: 0.4rem 1rem;
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 5px;
+    border-style: none;
+    width:40%;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen (min-width: 1024px){
+    #catalogo .container{
+     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
 }
